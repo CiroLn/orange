@@ -1,33 +1,30 @@
 <template>
-  <div>
-    <h4>{{ title }}</h4>
-
-  </div>
+  <div></div>
 </template>
 
 <script>
-  import { ref, reactive } from "@vue/reactivity";
-  import { h } from "@vue/runtime-core";
-  export default {
-    props: {
-      title: {
-        type: String,
-        default: 'Composition',
-      },
+import { ref, reactive, toRefs, readonly, computed } from "@vue/reactivity";
+
+export default {
+  props: {
+    title: {
+      type: String,
+      default: 'Composition',
     },
-    setup(props, { expose }) {
-      const counter = ref(100);
-      const book = reactive({'name': 'Vue3 Guide', 'price': 66});
-
-      const increment = () => {
-        counter.value++;
+  },
+  setup(props) {
+    const count = ref(1);
+    const plusOne = computed(() => count.value + 1, {
+      onTrack(e) {
+        console.log('onTrack: ', e);
+      },
+      onTrigger(e) {
+        console.log('onTrigger: ', e);
       }
-      // 提供父组件使用
-      expose({
-        increment
-      });
+    });
 
-      return () => h('div', [book.name, '  ', book.price, '  ', counter.value]);
-    }    
+    console.log(plusOne.value);
+    count.value++;
   }
+}
 </script>
