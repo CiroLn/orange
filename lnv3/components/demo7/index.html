@@ -5,12 +5,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Component Prop</title>
+  <title>Component Event</title>
   <script src="https://unpkg.com/vue@next"></script>
 </head>
 <body>
   <div id="app">
-    <blog-post v-for="blog of posts" :title="blog.title" :key="blog.id"></blog-post>
+    <custom-layout id="custom-layout" @click="changeValue"></custom-layout>
   </div>
 
   <script type="module" src="./main.js"></script>

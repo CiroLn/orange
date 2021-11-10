@@ -1,9 +1,12 @@
 const BlogPost = {
   props: ['title'],
+  emits: ['enlargeText', 'enlargeText2'],
   template: `
     <div>
       <h4 :title="title">{{ title }}</h4>
-      <button></button>
+      <button @click="$emit('enlargeText')">Enlarge text</button>
+      &nbsp;&nbsp;
+      <button @click="$emit('enlargeText2', 2)">Enlarge text2</button>
     </div>
   `
 };
@@ -19,7 +22,8 @@ const vm = Vue.createApp({
         { id: 2, title: 'Blogging with Vue' },
         { id: 3, title: 'Why Vue is so fun' }
       ],
-      blogFontSize: 15,
+      blogFontSize: 13,
+      postFontSize: 13,
     }
   }
 });
