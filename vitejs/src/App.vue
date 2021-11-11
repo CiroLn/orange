@@ -4,7 +4,8 @@
   // import ComC from './components/slots/ComC.vue';
   // import PageA from './components/injects/PageA.vue';
   // import PageHome from './components/keepalive/PageHome.vue';
-  import PageHome from './components/refs/PageHome.vue';
+  // import PageHome from './components/refs/PageHome.vue';
+  import PageHome from './components/setup/PageHome.vue';
 </script>
 
 <template>
