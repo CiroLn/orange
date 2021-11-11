@@ -1,37 +1,52 @@
-<script>
-  import MyBook from "./components/MyBook.vue";
-
-  export default {
-    components: {
-      MyBook
-    },
-
-    methods: {
-      hiChild() {
-        this.$refs.mbook.increment();
-      }
-    }
-
-  }
+<script setup>
+  import ComA from './components/slots/ComA.vue';
+  import ComB from './components/slots/ComB.vue';
+  import ComC from './components/slots/ComC.vue';
+  import PageA from './components/injects/PageA.vue';
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <div>
-    <button @click="hiChild">按钮</button>
-  </div>
-  <br>
-  <br>
-  <my-book ref="mbook"></my-book>
+  <page-a></page-a>
+<!-- 
+  <com-b>
+    <template #header>
+      <h1>Here is a page title.</h1>
+    </template>
+    <template #default>
+      <div>Here is a page main.</div>
+    </template>
+    <template #footer>
+      <p>Here's some contact info</p>
+    </template>
+  </com-b>  -->
+
+  <!-- 
+  <com-c>
+    <template v-slot:idx="slotProp1">
+      <i class="fa fa-check">🐕 &nbsp;&nbsp;</i>
+      <strong>{{ slotProp1.idx }} -- </strong>
+    </template>
+    <template v-slot:default="slotProp2">      
+      <span>{{ slotProp2.item }}</span>      
+    </template>
+  </com-c> 
+  -->
+
+  <!-- <ComA action="remove">Edit todo - {{ action }}</ComA> -->
+  <!--   
+  <com-b>
+    <template v-slot:header>
+      <h1>Here is a page title.</h1>
+    </template>
+    <template v-slot:default>
+      <div>Here is a page main.</div>
+    </template>
+    <template v-slot:footer>
+      <p>Here's some contact info</p>
+    </template>
+  </com-b> 
+  -->
+
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+
