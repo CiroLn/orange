@@ -1,12 +1,15 @@
 <script setup>
-  import ComA from './components/slots/ComA.vue';
-  import ComB from './components/slots/ComB.vue';
-  import ComC from './components/slots/ComC.vue';
-  import PageA from './components/injects/PageA.vue';
+  // import ComA from './components/slots/ComA.vue';
+  // import ComB from './components/slots/ComB.vue';
+  // import ComC from './components/slots/ComC.vue';
+  // import PageA from './components/injects/PageA.vue';
+  // import PageHome from './components/keepalive/PageHome.vue';
+  import PageHome from './components/refs/PageHome.vue';
 </script>
 
 <template>
-  <page-a></page-a>
+  <page-home></page-home>
+  <!-- <page-a></page-a> -->
 <!-- 
   <com-b>
     <template #header>
