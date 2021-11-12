@@ -5,7 +5,8 @@
   // import PageA from './components/injects/PageA.vue';
   // import PageHome from './components/keepalive/PageHome.vue';
   // import PageHome from './components/refs/PageHome.vue';
-  import PageHome from './components/setup/PageHome.vue';
+  // import PageHome from './components/setup/PageHome.vue';
+  import PageHome from './components/teleport/PageHome.vue';
 </script>
 
 <template>
