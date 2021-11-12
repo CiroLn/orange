@@ -3,7 +3,7 @@
     <el-header><Header /></el-header>
     <el-container>
       <el-aside width="200px"><Sidebar /></el-aside>
-      <el-container>
+      <el-container class="page-main">
         <el-main>
           <router-view></router-view>
         </el-main>
@@ -20,8 +20,18 @@
 </script>
 
 <style lang="less" scoped>
+  .page-main {
+    background-color: #F2F6FC;
+  }
   .el-header {
     padding: 0;
+  }  
+  .el-main {
+    margin: 16px;
+    background-color: #fff;
+  }
+  .el-footer {
+    background-color: #fff;
   }
 </style>
 
