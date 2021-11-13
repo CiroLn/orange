@@ -10,32 +10,28 @@
   </div>
 </template>
 
-<script lang="ts">
-export default {
-  data() {
-    return {
-      shadowGroup: [
-        {
-          name: 'Basic Shadow',
-          type: 'base',
-        },
-        {
-          name: 'Light Shadow',
-          type: 'light',
-        },
-      ],
-    }
+<script setup>
+import { reactive } from 'vue'
+
+const shadowGroup = reactive([
+  {
+    name: 'Basic Shadow',
+    type: 'base',
   },
-  methods: {
-    getValue(type) {
-      const getCssVarValue = (prefix, type) =>
-        getComputedStyle(document.documentElement).getPropertyValue(
-          `--el-${prefix}-${type}`
-        )
-      return getCssVarValue('box-shadow', type)
-    },
+  {
+    name: 'Light Shadow',
+    type: 'light',
   },
+])
+
+const getValue = (type) => {
+  const getCssVarValue = (prefix, type) =>
+    getComputedStyle(document.documentElement).getPropertyValue(
+      `--el-${prefix}-${type}`
+    )
+  return getCssVarValue('box-shadow', type)
 }
+
 </script>
 <style scoped>
 .demo-shadow {

@@ -17,41 +17,37 @@
   </el-row>
 </template>
 
-<script lang="ts">
-export default {
-  data() {
-    return {
-      radiusGroup: [
-        {
-          name: 'No Radius',
-          type: '',
-        },
-        {
-          name: 'Small Radius',
-          type: 'small',
-        },
-        {
-          name: 'Large Radius',
-          type: 'base',
-        },
-        {
-          name: 'Round Radius',
-          type: 'round',
-        },
-      ],
-    }
+<script setup>
+import { reactive } from 'vue'
+
+const radiusGroup = reactive([
+  {
+    name: 'No Radius',
+    type: '',
   },
-  methods: {
-    getValue(type) {
-      const getCssVarValue = (prefix, type) =>
-        getComputedStyle(document.documentElement).getPropertyValue(
-          `--el-${prefix}-${type}`
-        )
-      return getCssVarValue('border-radius', type)
-    },
+  {
+    name: 'Small Radius',
+    type: 'small',
   },
+  {
+    name: 'Large Radius',
+    type: 'base',
+  },
+  {
+    name: 'Round Radius',
+    type: 'round',
+  },
+]);
+
+const getValue = (type) => {
+  const getCssVarValue = (prefix, type) =>
+    getComputedStyle(document.documentElement).getPropertyValue(
+      `--el-${prefix}-${type}`
+    )
+  return getCssVarValue('border-radius', type)
 }
 </script>
+
 <style scoped>
 .demo-radius .title {
   color: var(--el-text-color-regular);

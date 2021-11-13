@@ -1,17 +1,17 @@
 export default [
   {
     path: '/border/styles',
-    name: 'border-styles',
-    component: () => import('../components/border/Styles.vue')
+    name: 'RouteBorderStyles',
+    component: () => import('../components/border/BorderStyles.vue')
   },
   {
     path: '/border/radius',
-    name: 'border-radius',
-    component: () => import('../components/border/Radius.vue')
+    name: 'RouteBorderRadius',
+    component: () => import('../components/border/BorderRadius.vue')
   },
   {
     path: '/border/shadow',
-    name: 'border-shadow',
-    component: () => import('../components/border/Shadow.vue')
+    name: 'RouteBorderShadow',
+    component: () => import('../components/border/BorderShadow.vue')
   }, 
 ]

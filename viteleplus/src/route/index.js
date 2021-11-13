@@ -1,5 +1,6 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import border from './border';
+import button from './button';
 
 const routes = [
   {
@@ -15,8 +16,9 @@ const routes = [
     path: '/404',
     name: 'NotFound',
     component: () => import('../components/404.vue')
-  },  
-  ...border
+  },
+  ...border,
+  ...button,
 ]
 
 const router = createRouter({
