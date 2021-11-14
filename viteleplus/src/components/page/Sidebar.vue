@@ -71,6 +71,16 @@
         <el-menu-item index="/link/two">下划线</el-menu-item>
         <el-menu-item index="/link/three">图标</el-menu-item>
       </el-sub-menu>
+      <el-sub-menu index="1-7">
+        <template #title>
+          <span>Scrollbar 滚动条</span>
+        </template>
+        <el-menu-item index="/scrollbar/basic">基础用法</el-menu-item>
+        <el-menu-item index="/scrollbar/one">横向滚动</el-menu-item>
+        <el-menu-item index="/scrollbar/two">最大高度</el-menu-item>
+        <el-menu-item index="/scrollbar/three">手动滚动</el-menu-item>
+      </el-sub-menu>
+      <!--  -->
     </el-sub-menu>
   </el-menu>
 </template>
