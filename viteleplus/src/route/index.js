@@ -4,6 +4,7 @@ import button from './button';
 import container from "./container";
 import icon from "./icon";
 import layout from "./layout";
+import link from "./link";
 
 const routes = [
   {
@@ -25,6 +26,7 @@ const routes = [
   ...container,
   ...icon,
   ...layout,
+  ...link,
 ]
 
 const router = createRouter({

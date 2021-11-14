@@ -62,6 +62,15 @@
         <el-menu-item index="/layout/four">对齐方式</el-menu-item>
         <el-menu-item index="/layout/five">响应式布局</el-menu-item>
       </el-sub-menu>
+      <el-sub-menu index="1-6">
+        <template #title>
+          <span>Link 链接</span>
+        </template>
+        <el-menu-item index="/link/basic">基础用法</el-menu-item>
+        <el-menu-item index="/link/one">禁用状态</el-menu-item>
+        <el-menu-item index="/link/two">下划线</el-menu-item>
+        <el-menu-item index="/link/three">图标</el-menu-item>
+      </el-sub-menu>
     </el-sub-menu>
   </el-menu>
 </template>
