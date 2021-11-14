@@ -1,5 +1,5 @@
 <template>
-  <el-menu router>
+  <el-menu :default-active="defaultActive" router>
     <el-sub-menu index="1">
       <template #title>
         <span>Basic 基础组件</span>
@@ -41,3 +41,16 @@
     </el-sub-menu>
   </el-menu>
 </template>
+
+<script setup>
+import { useRoute } from 'vue-router';
+import { ref } from 'vue-demi';
+
+const route = useRoute();
+const defaultActive = ref(null); // TODO: 第一次 route.path 的值为 '/' 问题
+
+setTimeout(() => {
+  console.log('path: ', route.path);
+  defaultActive.value = route.path;
+}, 100);
+</script>
