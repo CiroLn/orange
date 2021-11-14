@@ -3,7 +3,7 @@ import border from './border';
 import button from './button';
 import container from "./container";
 import icon from "./icon";
-
+import layout from "./layout";
 
 const routes = [
   {
@@ -24,6 +24,7 @@ const routes = [
   ...button,
   ...container,
   ...icon,
+  ...layout,
 ]
 
 const router = createRouter({

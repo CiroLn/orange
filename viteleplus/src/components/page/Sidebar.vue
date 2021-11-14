@@ -42,8 +42,25 @@
         <template #title>
           <span>Icon 图标</span>
         </template>
-        <el-menu-item index="/icon/one">结合<code>el-icon</code>使用</el-menu-item>
-        <el-menu-item index="/icon/two">直接使用<code>SVG</code>图标</el-menu-item>
+        <el-menu-item index="/icon/one">
+          结合
+          <code>el-icon</code>使用
+        </el-menu-item>
+        <el-menu-item index="/icon/two">
+          直接使用
+          <code>SVG</code>图标
+        </el-menu-item>
+      </el-sub-menu>
+      <el-sub-menu index="1-5">
+        <template #title>
+          <span>Layout 布局</span>
+        </template>
+        <el-menu-item index="/layout/basic">基础布局</el-menu-item>
+        <el-menu-item index="/layout/one">分栏间隔</el-menu-item>
+        <el-menu-item index="/layout/two">混合布局</el-menu-item>
+        <el-menu-item index="/layout/three">列偏移</el-menu-item>
+        <el-menu-item index="/layout/four">对齐方式</el-menu-item>
+        <el-menu-item index="/layout/five">响应式布局</el-menu-item>
       </el-sub-menu>
     </el-sub-menu>
   </el-menu>
