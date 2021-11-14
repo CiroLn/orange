@@ -38,6 +38,13 @@
         <el-menu-item index="/ctn/seven">左上中下布局</el-menu-item>
         <el-menu-item index="/ctn/eight">实例</el-menu-item>
       </el-sub-menu>
+      <el-sub-menu index="1-4">
+        <template #title>
+          <span>Icon 图标</span>
+        </template>
+        <el-menu-item index="/icon/one">结合<code>el-icon</code>使用</el-menu-item>
+        <el-menu-item index="/icon/two">直接使用<code>SVG</code>图标</el-menu-item>
+      </el-sub-menu>
     </el-sub-menu>
   </el-menu>
 </template>

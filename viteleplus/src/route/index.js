@@ -2,6 +2,8 @@ import { createRouter, createWebHashHistory } from "vue-router";
 import border from './border';
 import button from './button';
 import container from "./container";
+import icon from "./icon";
+
 
 const routes = [
   {
@@ -21,6 +23,7 @@ const routes = [
   ...border,
   ...button,
   ...container,
+  ...icon,
 ]
 
 const router = createRouter({
