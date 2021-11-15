@@ -1,12 +1,10 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import border from './border';
-import button from './button';
-import container from "./container";
-import icon from "./icon";
-import layout from "./layout";
-import link from "./link";
-import scrollbar from "./scrollbar";
-import space from "./space";
+import basic from './basic';
+import form from './form';
+import data from './data';
+import nav from './nav';
+import feedback from './feedback';
+import others from './others';
 
 const routes = [
   {
@@ -23,14 +21,12 @@ const routes = [
     name: 'NotFound',
     component: () => import('../components/404.vue')
   },
-  ...border,
-  ...button,
-  ...container,
-  ...icon,
-  ...layout,
-  ...link,
-  ...scrollbar,
-  ...space,
+  ...basic,
+  ...form,
+  ...data,
+  ...nav,
+  ...feedback,
+  ...others,
 ]
 
 const router = createRouter({
