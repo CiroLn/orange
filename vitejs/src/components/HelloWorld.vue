@@ -6,6 +6,9 @@ defineProps({
 })
 
 const count = ref(0)
+
+// console.log('globalFoo: ', globalFoo);
+
 </script>
 
 <template>
