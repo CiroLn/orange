@@ -80,6 +80,20 @@
         <el-menu-item index="/scrollbar/two">最大高度</el-menu-item>
         <el-menu-item index="/scrollbar/three">手动滚动</el-menu-item>
       </el-sub-menu>
+      <el-sub-menu index="1-8">
+        <template #title>
+          <span>Space 间距</span>
+        </template>
+        <el-menu-item index="/space/basic">基础用法</el-menu-item>
+        <el-menu-item index="/space/one">垂直布局</el-menu-item>
+        <el-menu-item index="/space/two">控制间距的大小</el-menu-item>
+        <el-menu-item index="/space/three">自定义Size</el-menu-item>
+        <el-menu-item index="/space/four">自动换行</el-menu-item>
+        <el-menu-item index="/space/five">行间分隔符</el-menu-item>
+        <el-menu-item index="/space/six">对齐方式</el-menu-item>
+        <el-menu-item index="/space/seven">自动填充容器</el-menu-item>        
+        <el-menu-item index="/space/eight">自动填充容器（二）</el-menu-item>        
+      </el-sub-menu>      
       <!--  -->
     </el-sub-menu>
   </el-menu>
@@ -95,5 +109,5 @@ const defaultActive = ref(null); // TODO: 第一次 route.path 的值为 '/' 问
 setTimeout(() => {
   console.log('path: ', route.path);
   defaultActive.value = route.path;
-}, 100);
+}, 1000);
 </script>

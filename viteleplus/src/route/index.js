@@ -6,6 +6,7 @@ import icon from "./icon";
 import layout from "./layout";
 import link from "./link";
 import scrollbar from "./scrollbar";
+import space from "./space";
 
 const routes = [
   {
@@ -28,7 +29,8 @@ const routes = [
   ...icon,
   ...layout,
   ...link,
-  ...scrollbar
+  ...scrollbar,
+  ...space,
 ]
 
 const router = createRouter({
