@@ -1,4 +1,5 @@
-const prefix = `@/components/form/cascader/`;
+const modules = import.meta.glob('/src/components/form/cascader/*.vue');
+const pathKey = `/src/components/form/cascader/`;
 const lower = 'csd', upper = 'Csd';
 
 
@@ -6,51 +7,56 @@ export default [
   {
     path: `/${lower}/basic`,
     name: `Route${upper}Basic`,
-    component: () => import(`${prefix}${upper}Basic.vue`)
+    component: modules[`${pathKey}${upper}Basic.vue`], // Vite 不支持在import()方法中动态拼接路径
+    beforeEnter: (to, from) => {
+      console.log('-----beforeEnter-----');
+      console.log(`to: `, to);
+      console.log(`from: `, from);
+    },
   },
   {
     path: `/${lower}/one`,
     name: `Route${upper}One`,
-    component: () => import(`${prefix}${upper}One.vue`)
+    component: modules[`${pathKey}${upper}One.vue`]
   },  
   {
     path: `/${lower}/two`,
-    name: `Route${upper}One`,
-    component: () => import(`${prefix}${upper}Two.vue`)
+    name: `Route${upper}Two`,
+    component: modules[`${pathKey}${upper}Two.vue`]
   },
   {
     path: `/${lower}/three`,
     name: `Route${upper}Three`,
-    component: () => import(`${prefix}${upper}Three.vue`)
+    component: modules[`${pathKey}${upper}Three.vue`]
   },
   {
     path: `/${lower}/four`,
     name: `Route${upper}Four`,
-    component: () => import(`${prefix}${upper}Four.vue`)
+    component: modules[`${pathKey}${upper}Four.vue`]
   },  
   {
     path: `/${lower}/five`,
     name: `Route${upper}Five`,
-    component: () => import(`${prefix}${upper}Five.vue`)
+    component: modules[`${pathKey}${upper}Five.vue`]
   },
   {
     path: `/${lower}/six`,
     name: `Route${upper}Six`,
-    component: () => import(`${prefix}${upper}Six.vue`)
+    component: modules[`${pathKey}${upper}Six.vue`]
   },
   {
     path: `/${lower}/seven`,
     name: `Route${upper}Seven`,
-    component: () => import(`${prefix}${upper}Seven.vue`)
+    component: modules[`${pathKey}${upper}Seven.vue`]
   },  
   {
     path: `/${lower}/eight`,
     name: `Route${upper}Eight`,
-    component: () => import(`${prefix}${upper}Eight.vue`)
+    component: modules[`${pathKey}${upper}Eight.vue`]
   },
   {
     path: `/${lower}/nine`,
     name: `Route${upper}Nine`,
-    component: () => import(`${prefix}${upper}Nine.vue`)
+    component: modules[`${pathKey}${upper}Nine.vue`]
   },        
 ]
