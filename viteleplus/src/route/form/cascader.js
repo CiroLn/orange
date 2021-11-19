@@ -8,11 +8,6 @@ export default [
     path: `/${lower}/basic`,
     name: `Route${upper}Basic`,
     component: modules[`${pathKey}${upper}Basic.vue`], // Vite 不支持在import()方法中动态拼接路径
-    beforeEnter: (to, from) => {
-      console.log('-----beforeEnter-----');
-      console.log(`to: `, to);
-      console.log(`from: `, from);
-    },
   },
   {
     path: `/${lower}/one`,
