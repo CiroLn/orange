@@ -14,5 +14,22 @@
       <el-menu-item index="/csd/eight">自定义节点内容</el-menu-item>
       <el-menu-item index="/csd/nine">级联面板</el-menu-item>
     </el-sub-menu>
+    <el-sub-menu index="2-2">
+      <template #title><span>Checkbox 多选框</span></template>
+      <el-menu-item index="/cbox/basic">基础用法</el-menu-item>
+      <el-menu-item index="/cbox/one">禁用状态</el-menu-item>
+      <el-menu-item index="/cbox/two">多选框组</el-menu-item>
+      <el-menu-item index="/cbox/three">中间状态</el-menu-item>
+      <el-menu-item index="/cbox/four">可选项目数量的限制</el-menu-item>
+      <el-menu-item index="/cbox/five">按钮样式</el-menu-item>
+      <el-menu-item index="/cbox/six">带有边框</el-menu-item>
+    </el-sub-menu>  
+    <el-sub-menu index="2-3">
+      <template #title><span>Color Picker 取色器</span></template>
+      <el-menu-item index="/cpicker/basic">基础用法</el-menu-item>
+      <el-menu-item index="/cpicker/one">选择透明度</el-menu-item>
+      <el-menu-item index="/cpicker/two">预定义颜色</el-menu-item>
+      <el-menu-item index="/cpicker/three">选择尺寸</el-menu-item>
+    </el-sub-menu>        
   </el-sub-menu>
 </template>
