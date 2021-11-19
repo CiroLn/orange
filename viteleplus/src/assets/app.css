@@ -1,3 +1,7 @@
+:root {
+  --my-nav-width: 288px;
+}
+
 *, ::before, ::after {
   box-sizing: border-box;
 }

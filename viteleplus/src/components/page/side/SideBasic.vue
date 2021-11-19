@@ -1,6 +1,7 @@
 <template>
   <el-sub-menu index="1">
     <template #title>
+      <el-icon><IceCream/></el-icon>
       <span>Basic 基础组件</span>
     </template>
     <el-sub-menu index="1-1">
@@ -95,3 +96,7 @@
     </el-sub-menu>
   </el-sub-menu>
 </template>
+
+<script setup>
+  import { IceCream } from '@element-plus/icons';
+</script>
