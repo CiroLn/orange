@@ -2,37 +2,37 @@
   <div class="box">
     <div class="logo"></div>
     <el-menu mode="horizontal">
-      <el-menu-item index="1">
+      <el-menu-item index="1" @click="menuClick">
         <template #title>
           <el-icon><Apple /></el-icon>
           <span>Element Plus</span>
         </template>
       </el-menu-item>
-      <el-menu-item index="2">
+      <el-menu-item index="2" @click="menuClick">
         <template #title>
           <el-icon><Cherry /></el-icon>
-          <span>项目一</span>
+          <span>画布</span>
         </template>        
       </el-menu-item>
-      <el-menu-item index="3">
+      <el-menu-item index="3" @click="menuClick">
         <template #title>
           <el-icon><Grape /></el-icon>
-          <span>项目二</span>
+          <span>图播</span>
         </template>        
       </el-menu-item>
-      <el-menu-item index="4">
+      <el-menu-item index="4" @click="menuClick">
         <template #title>
           <el-icon><Orange /></el-icon>
           <span>项目三</span>
         </template>        
       </el-menu-item>
-      <el-menu-item index="5">
+      <el-menu-item index="5" @click="menuClick">
         <template #title>
           <el-icon><Eleme /></el-icon>
           <span>项目四</span>
         </template>        
       </el-menu-item>
-      <el-menu-item index="6">
+      <el-menu-item index="6" @click="menuClick">
         <template #title>
           <el-icon><Food /></el-icon>
           <span>项目二</span>
@@ -44,6 +44,12 @@
 
 <script setup>
 import { Apple, Cherry, Grape, Orange, Eleme, Food } from '@element-plus/icons';
+
+
+function menuClick(v) {
+  console.log(v.index);
+}
+
 </script>
 
 <style lang="less" scoped>
