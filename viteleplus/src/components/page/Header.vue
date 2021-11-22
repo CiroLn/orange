@@ -1,20 +1,20 @@
 <template>
   <div class="box">
     <div class="logo"></div>
-    <el-menu mode="horizontal">
-      <el-menu-item index="1" @click="menuClick">
+    <el-menu mode="horizontal" :default-active="defaultActive">
+      <el-menu-item index="elplus" @click="menuClick">
         <template #title>
           <el-icon><Apple /></el-icon>
           <span>Element Plus</span>
         </template>
       </el-menu-item>
-      <el-menu-item index="2" @click="menuClick">
+      <el-menu-item index="graffiti" @click="menuClick">
         <template #title>
           <el-icon><Cherry /></el-icon>
-          <span>画布</span>
+          <span>涂鸦</span>
         </template>        
       </el-menu-item>
-      <el-menu-item index="3" @click="menuClick">
+      <el-menu-item index="slide" @click="menuClick">
         <template #title>
           <el-icon><Grape /></el-icon>
           <span>图播</span>
@@ -43,11 +43,19 @@
 </template>
 
 <script setup>
+import { computed } from 'vue-demi';
+import { useStore } from 'vuex';
 import { Apple, Cherry, Grape, Orange, Eleme, Food } from '@element-plus/icons';
+import { ROOT_MUTAIONS } from '@/store/mutation-types';
 
+
+
+const store = useStore();
+const defaultActive = window.localStorage.getItem('headerMenuId') || store.state.headerMenuId;
 
 function menuClick(v) {
-  console.log(v.index);
+  store.commit(ROOT_MUTAIONS.HEADER_MENU_CHANGE, v.index);
+  window.localStorage.setItem('headerMenuId', v.index);
 }
 
 </script>
