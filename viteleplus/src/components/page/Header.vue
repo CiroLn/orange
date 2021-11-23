@@ -14,7 +14,7 @@
           <span>涂鸦</span>
         </template>        
       </el-menu-item>
-      <el-menu-item index="slide" @click="menuClick">
+      <el-menu-item index="picslide" @click="menuClick">
         <template #title>
           <el-icon><Grape /></el-icon>
           <span>图播</span>
@@ -43,7 +43,6 @@
 </template>
 
 <script setup>
-import { computed } from 'vue-demi';
 import { useStore } from 'vuex';
 import { Apple, Cherry, Grape, Orange, Eleme, Food } from '@element-plus/icons';
 import { ROOT_MUTAIONS } from '@/store/mutation-types';

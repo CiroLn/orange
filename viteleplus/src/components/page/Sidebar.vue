@@ -6,7 +6,8 @@
 
 <script setup>
 import SideElplus from './side-elplus/index.vue';
-
+import SideGraffiti from './side-graffiti/index.vue';
+import SidePicslide from './side-picslide/index.vue';
 
 import { useRoute } from 'vue-router';
 import { ref } from 'vue-demi';
