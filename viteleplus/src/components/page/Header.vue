@@ -1,20 +1,20 @@
 <template>
   <div class="box">
     <div class="logo"></div>
-    <el-menu mode="horizontal" :default-active="defaultActive">
-      <el-menu-item index="elplus" @click="menuClick">
+    <el-menu mode="horizontal" :default-active="defaultActive" router>
+      <el-menu-item index="/elplus" @click="menuClick">
         <template #title>
           <el-icon><Apple /></el-icon>
           <span>Element Plus</span>
         </template>
       </el-menu-item>
-      <el-menu-item index="graffiti" @click="menuClick">
+      <el-menu-item index="/graffiti" @click="menuClick">
         <template #title>
           <el-icon><Cherry /></el-icon>
           <span>涂鸦</span>
         </template>        
       </el-menu-item>
-      <el-menu-item index="picslide" @click="menuClick">
+      <el-menu-item index="/picslide" @click="menuClick">
         <template #title>
           <el-icon><Grape /></el-icon>
           <span>图播</span>
@@ -47,14 +47,14 @@ import { useStore } from 'vuex';
 import { Apple, Cherry, Grape, Orange, Eleme, Food } from '@element-plus/icons';
 import { ROOT_MUTAIONS } from '@/store/mutation-types';
 
-
-
 const store = useStore();
-const defaultActive = window.localStorage.getItem('headerMenuId') || store.state.headerMenuId;
+const defaultActive = '/' + window.localStorage.getItem('pageTab') || store.state.pageTab;
 
 function menuClick(v) {
-  store.commit(ROOT_MUTAIONS.HEADER_MENU_CHANGE, v.index);
-  window.localStorage.setItem('headerMenuId', v.index);
+  const pageTab = v.index.replace(/\//, ''); // 去掉最前面的斜线
+  console.log('pageTab: ', pageTab);
+  store.commit(ROOT_MUTAIONS.PAGE_TAB_CHANGE, pageTab);
+  window.localStorage.setItem('pageTab', pageTab);
 }
 
 </script>

@@ -1,14 +1,16 @@
 import { createStore } from "vuex"
-import root_mutations from "./mutations";
+import { ROOT_MUTAIONS } from "./mutation-types";
 
 const store = createStore({
   state() {
     return {
-      headerMenuId: 'elplus',
+      pageTab: '', // elplus
     }
   },
   mutations: {
-    ...root_mutations,
+    [ROOT_MUTAIONS.PAGE_TAB_CHANGE](state, id) {
+      state.pageTab = id;
+    } 
   }
 });
 

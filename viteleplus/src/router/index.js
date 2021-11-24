@@ -5,6 +5,8 @@ import data from './data';
 import nav from './nav';
 import feedback from './feedback';
 import others from './others';
+import graffiti from "./graffiti";
+import picslide from "./picslide";
 
 const routes = [
   {
@@ -27,6 +29,8 @@ const routes = [
   ...nav,
   ...feedback,
   ...others,
+  ...graffiti,
+  ...picslide,
 ]
 
 const router = createRouter({
