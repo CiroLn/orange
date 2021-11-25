@@ -1,5 +1,5 @@
-const pathKey = `/src/components/form/colorpicker/`;
-const modules = import.meta.glob(`/src/components/form/colorpicker/*.vue`);
+const pathKey = `/src/views/elplus/form/colorpicker/`;
+const modules = import.meta.glob(`/src/views/elplus/form/colorpicker/*.vue`);
 const lower = 'cpicker', upper = 'Cpicker';
 
 

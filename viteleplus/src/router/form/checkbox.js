@@ -1,5 +1,5 @@
-const pathKey = `/src/components/form/checkbox/`;
-const modules = import.meta.glob(`/src/components/form/checkbox/*.vue`);
+const pathKey = `/src/views/elplus/form/checkbox/`;
+const modules = import.meta.glob(`/src/views/elplus/form/checkbox/*.vue`);
 const lower = 'cbox', upper = 'Cbox';
 
 

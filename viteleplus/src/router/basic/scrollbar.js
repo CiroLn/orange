@@ -2,21 +2,21 @@ export default [
   {
     path: '/scrollbar/basic',
     name: 'RouteSbarBasic',
-    component: () => import('../../components/basic/scrollbar/SbarBasic.vue')
+    component: () => import('@/views/elplus/basic/scrollbar/SbarBasic.vue')
   },
   {
     path: '/scrollbar/one',
     name: 'RouteSbarOne',
-    component: () => import('../../components/basic/scrollbar/SbarOne.vue')
+    component: () => import('@/views/elplus/basic/scrollbar/SbarOne.vue')
   },
   {
     path: '/scrollbar/two',
     name: 'RouteSbarTwo',
-    component: () => import('../../components/basic/scrollbar/SbarTwo.vue')
+    component: () => import('@/views/elplus/basic/scrollbar/SbarTwo.vue')
   },
   {
     path: '/scrollbar/three',
     name: 'RouteSbarThree',
-    component: () => import('../../components/basic/scrollbar/SbarThree.vue')
+    component: () => import('@/views/elplus/basic/scrollbar/SbarThree.vue')
   }
 ]

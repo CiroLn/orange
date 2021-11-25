@@ -1,5 +1,5 @@
-const modules = import.meta.glob('/src/components/form/cascader/*.vue');
-const pathKey = `/src/components/form/cascader/`;
+const modules = import.meta.glob('/src/views/elplus/form/cascader/*.vue');
+const pathKey = `/src/views/elplus/form/cascader/`;
 const lower = 'csd', upper = 'Csd';
 
 
