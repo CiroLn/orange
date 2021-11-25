@@ -8,34 +8,22 @@
           <span>Element Plus</span>
         </template>
       </el-menu-item>
-      <el-menu-item index="graffiti" @click="menuClick">
+      <el-menu-item index="cherry" @click="menuClick">
         <template #title>
           <el-icon><Cherry /></el-icon>
-          <span>涂鸦</span>
+          <span>樱桃</span>
         </template>        
       </el-menu-item>
-      <el-menu-item index="picslide" @click="menuClick">
+      <el-menu-item index="grape" @click="menuClick">
         <template #title>
           <el-icon><Grape /></el-icon>
-          <span>图播</span>
+          <span>葡萄</span>
         </template>        
       </el-menu-item>
-      <el-menu-item index="4" @click="menuClick">
+      <el-menu-item index="orange" @click="menuClick">
         <template #title>
           <el-icon><Orange /></el-icon>
-          <span>项目三</span>
-        </template>        
-      </el-menu-item>
-      <el-menu-item index="5" @click="menuClick">
-        <template #title>
-          <el-icon><Eleme /></el-icon>
-          <span>项目四</span>
-        </template>        
-      </el-menu-item>
-      <el-menu-item index="6" @click="menuClick">
-        <template #title>
-          <el-icon><Food /></el-icon>
-          <span>项目二</span>
+          <span>柑橘</span>
         </template>        
       </el-menu-item>
     </el-menu>
@@ -69,7 +57,7 @@ function menuClick(v) {
     // width: var(--el-aside-width);
     width: 300px;
     height: 60px;
-    background-image: url("../../assets/logo.svg");
+    // background-image: url("../../assets/logo.svg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-clip: padding-box;

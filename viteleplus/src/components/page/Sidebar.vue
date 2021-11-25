@@ -6,8 +6,8 @@
 
 <script setup>
 import SideElplus from './side-elplus/index.vue';
-import SideGraffiti from './side-graffiti/index.vue';
-import SidePicslide from './side-picslide/index.vue';
+import Sidecherry from './side-cherry/index.vue';
+import Sidegrape from './side-grape/index.vue';
 
 import { computed } from 'vue-demi';
 import { useStore } from 'vuex';
@@ -20,10 +20,10 @@ const activeSide = computed(() => {
   switch (pageTab) {
     case 'elplus':
       return SideElplus;
-    case 'graffiti':
-      return SideGraffiti;
-    case 'picslide':
-      return SidePicslide;
+    case 'cherry':
+      return Sidecherry;
+    case 'grape':
+      return Sidegrape;
     default:
       return SideElplus
   }
