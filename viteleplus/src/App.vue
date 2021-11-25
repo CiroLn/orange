@@ -2,7 +2,7 @@
   <el-container style="height: 100%;">
     <el-header><Header /></el-header>
     <el-container>
-      <el-aside width="var(--my-nav-width)"><Sidebar /></el-aside>
+      <el-aside><Sidebar /></el-aside>
       <el-container class="page-main">
         <el-main>
           <router-view></router-view>
