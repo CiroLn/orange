@@ -1,3 +1,3 @@
 <template>
-涂鸦面板一
+图播页面4
 </template>
