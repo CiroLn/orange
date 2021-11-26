@@ -1,13 +1,11 @@
+import files from './files'
+
 export default [
   {
     path: '/cherry',
-    redirect: '/cherry/page1'
-  },    
-  {
-    path: '/cherry/page1',
-    name: 'RoutecherryPage1',
-    component: () => import('@/views/cherry/page1.vue')
-  },
+    redirect: '/cherry/page2'
+  },  
+  ...files,  
   {
     path: '/cherry/page2',
     name: 'RoutecherryPage2',
